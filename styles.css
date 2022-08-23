@@ -1,0 +1,424 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: #403B3B;
+    overflow-x: hidden;
+}
+
+h1, h2{
+    margin: 0;
+}
+
+.d-none{
+    display: none;
+}
+
+header{
+    padding: 0.8rem;
+}
+
+header h2{
+    display: inline;
+    margin-right: auto;
+}
+
+header > div{
+    display: flex;
+    align-items: center;
+    animation: top-down 2s;
+}
+
+#cross, #hamburger{
+    cursor: pointer;
+}
+
+.hero{
+    background: url('assets/mountain.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container{
+    max-width: 550px;
+}
+
+section, footer{
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    position: absolute;
+    width: 66%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: #C80915;
+    text-align: right;
+    padding: 1rem;
+    z-index: 10;
+    animation: top-down 2s;
+}
+
+nav ul {
+    list-style: none;
+    margin-left: -1rem;
+    margin-top: 5rem;
+}
+
+nav li {
+    margin-top: 1rem;
+    margin-left: 0;
+    text-align: left;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+nav a:hover{
+    border-radius: 5rem;
+    background-color: white;
+    color: #C80915;
+    padding: 0.2rem 0.6rem;
+}
+
+.nav-hidden{
+    display: none;
+}
+
+.hero h1{
+    font-size: 1.8rem;
+    position: relative;
+    top: 30%;
+    animation: bottom-up 2s;
+}
+
+.hero h1 span{
+    color: #C80915;
+}
+
+.hero section{
+    height: 85vh;
+    text-align: center;
+    padding: 1.2rem;
+    animation: bottom-up 3s;
+}
+
+.hero section .container{
+    width: 100%;
+    height: 100%;
+}
+
+.hero section a{
+    text-decoration: none;
+    color: white;
+    background-color: #C80915;
+    padding: 0.8rem 1.6rem;
+    border-radius: 5rem;
+    font-size: 1.4rem;
+    position: relative;
+    top: 50%;
+    font-weight: 500;
+}
+
+.hero section a:hover{
+    color: #C80915;
+    background-color: #F5F5F5;
+}
+
+.details{
+    background-color: #C80915;
+    color: white;
+    text-align: center;
+    padding: 1.2rem;
+}
+
+.person-hidden{
+    display: none;
+}
+
+.pic-section{
+    background-color: #F5F5F5;
+}
+
+.pic-section img{
+    width: 80vw;
+    height: 80vw;
+}
+
+.img-1{
+    position: relative;
+    top: -2%;
+    right: -10%;
+}
+
+.img-2{
+    position: relative;
+    left: -10%;
+    top: -10%;
+    z-index: 1;
+}
+
+.img-3{
+    position: relative;
+    top: -18%;
+    right: -10%;
+    z-index: 0;
+}
+
+.img-1:hover{
+    animation: big 1s forwards;
+}
+
+.img-2:hover{
+    animation: big 1s forwards;
+}
+
+.img-3:hover{
+    animation: big 1s forwards;
+}
+
+.pic-section a{
+    text-decoration: none;
+    color: #C80915;
+    border: 2px solid #C80915;
+    padding: 0.8rem 1.6rem;
+    border-radius: 5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.pic-section a:hover{
+    color: #F5F5F5;
+    background-color: #F5F5F5;
+    background-color: #C80915;
+}
+
+.pic-section h1{
+    margin-bottom: 4rem;
+}
+
+.pic-section .container .text{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.images{
+    height: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+    padding: 0.8rem;
+    text-align: center;
+    color: #403B3B;
+}
+
+footer a{
+    text-decoration: none;
+    color: #403B3B;
+    border: 2px solid #403B3B;
+    padding: 0.6rem 1.6rem;
+    border-radius: 0.6rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+footer a:hover{
+    background-color: #403B3B;
+    color: #F5F5F5;
+}
+
+footer h2{
+    margin: 4rem 0;
+}
+
+.social{
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+.social img{
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes bottom-up {
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes top-down {
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes big {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+
+@media (min-width: 530px){
+    .hero h1{
+        font-size: 2rem;
+    }
+    .pic-section img{
+        width: 60vw;
+        height: 60vw;
+    }
+    .container{
+        max-width: 700px;
+    }
+}
+
+@media (min-width: 760px) {
+    header{
+        padding: 1rem 2rem;
+    }
+    nav a:hover{
+        border-radius: unset;
+        background-color: unset;
+        padding: 0;
+        border-bottom: 2px solid #C80915;
+    }
+    nav a{
+        font-size: 1.4rem;
+    }
+    .hero h1{
+        font-size: 2.4rem;
+    }
+    .pic-section img{
+        width: 200px;
+        height: 200px;
+    }
+    .pic-section .img-2{
+        width: 300px;
+        height: 300px;
+    }
+    .img-1{
+        left: 0;
+        bottom: 0;
+        top: unset;
+        right: unset;
+    }
+    .img-2{
+        top: unset;
+        left: unset;
+        bottom: 5%;
+    }
+    .img-3{
+        top: unset;
+        right: unset;
+    }
+    .pic-section .container{
+        padding: 6rem 0;
+    }
+    .images{
+        flex-direction: row;
+        align-items: baseline;
+    }
+    .nav-hidden{
+        display: inline;
+    }
+    nav{
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: unset;
+        position: relative;
+    }
+    nav ul{
+        display: inline-flex;
+        gap: 2rem;
+        margin: 1rem 0;
+    }
+    nav a{
+        color: #403B3B;
+    }
+    header div{
+        display: inline;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #cross, #hamburger{
+        display: none;
+    }
+    .person-hidden{
+        display: inline;
+        position: relative;
+        left: 0;
+        height: 30rem;
+        width: 22rem;
+    }
+    .person-text{
+        width: 70%;
+    }
+    .person-text h1{
+        font-size: 2rem;
+    }
+    .person-text p{
+        font-size: 1.2rem;
+    }
+    .details .container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .details{
+        padding: 0 1.2rem 0 0;
+        text-align: unset;
+    }
+    .container{
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pic-section img{
+        width: 300px;
+        height: 300px;
+    }
+    .pic-section .img-2{
+        width: 400px;
+        height: 400px;
+    }
+    .hero h1{
+        font-size: 3.5rem;
+    }
+    .container{
+        max-width: 1000px;
+    }
+}
